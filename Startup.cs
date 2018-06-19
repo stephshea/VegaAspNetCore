@@ -29,7 +29,7 @@ namespace vega
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline -- middleware
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -43,6 +43,8 @@ namespace vega
             }
 
             app.UseHttpsRedirection();
+
+            //css etc
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

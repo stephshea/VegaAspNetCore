@@ -9,13 +9,11 @@ namespace vega.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-        // [Required]
-        // [StringLength(255)]
-        public ICollection<Model> Models { get; set; }
+        public ICollection<Model> Models { get; set; } = new Collection<Model>();
 
-        public Make()
-        {
-            Models = new Collection<Model>();
-        }
+        // public Make()
+        // {
+        //     Models = new Collection<Model>();
+        // }
     }
 }
